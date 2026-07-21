@@ -1,35 +1,31 @@
-function bookNow(){
-    alert("Thank you for choosing Travel World!");
-}
+
 function validateForm(){
-    let name=
-    document.getElementById("name").Value;
-    let email=
-    document.getElementById("email").Value;
-    let phone=
-    document.getElementById("phone").Value;
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("contactemail").value;
+    let phone = document.getElementById("contactphone").value;
     
-     if(name==""){
-        alert("Please enter your name");
-        return false;
-        if (email == "") {
-        alert("Please enter your email");
-        return false;
-    }
+if (name == "") {
+    alert("Please enter your name");
+    return false;
+}
 
-    if (!email.includes("@")) {
-        alert("Please enter a valid email");
-        return false;
-    }
+if (email == "") {
+    alert("Please enter your email");
+    return false;
+}
 
-    if (phone.length != 10) {
-        alert("Phone number must contain 10 digits");
-        return false;
-    }
+if (!email.includes("@")) {
+    alert("Please enter a valid email");
+    return false;
+}
 
-     }
-     alert("Form Submitted Successfully");
-     return true;
+if (phone.length !== 10 || isNaN(phone)) {
+    alert("Please enter a valid 10-digit phone number");
+    return false;
+}
+
+alert("Form Submitted Successfully");
+return true;     
 }
 let topButton = document.getElementById("topBtn");
 
@@ -99,8 +95,8 @@ function likePlace(button){
 function bookNow() {
 
     let name = document.getElementById("FullName").value;
-    let email = document.getElementById("email").value;
-    let phone = document.getElementById("phone").value;
+    let email = document.getElementById("bookingemail").value;
+    let phone = document.getElementById("bookingphone").value;
     let destination = document.getElementById("destination").value;
     let travelDate = document.getElementById("travelDate").value;
     let travelers = document.getElementById("travelers").value;

@@ -12,14 +12,14 @@
     <nav>
         <h2> Travel App</h2>
         <ul>
-            <li><a heref="#">Home</a> </li>
-            <li><a heref="#">About</a> </li>
-            <li><a heref="#">Destination</a> </li>
-            <li><a heref="#">Package</a> </li>
-            <li><a heref="#">Contact</a> </li>
+            <li><a href="#home">Home</a> </li>
+            <li><a href="#about">About</a> </li>
+            <li><a href="#destination">Destinations</a> </li>
+            <li><a href="#package">Package</a> </li>
+            <li><a href="#contact">Contact</a> </li>
         </ul>
     </nav>
-    <section class="hero">
+    <section id="home" class="hero">
        
         <div class="hero-content">
             <div class="slider">
@@ -27,14 +27,21 @@
 </div>
             <h1>Explore the World</h1>
             <p>Discover beautiful places and create unforgettable memories.</p>
-            <a href="#" class="btn">Explore Now</a>
+            <a href="#destination" class="btn">Explore Now</a>
             
         </div>
     </section>
+    <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>
+        Travel App helps you explore beautiful destinations, affordable tour packages, and unforgettable travel experiences.
+    </p>
+</section>
+
     <div class="search-box">
     <input type="text" id="searchInput" placeholder="Search Destination..." onkeyup="searchDestination()">
 </div>
-    <section class="destinations">
+    <section id="destination" class="destinations">
     <h2>Popular Destinations</h2>
     
     <div class="cards">
@@ -57,23 +64,23 @@
                 <p>Explore backwaters and green nature.</p>
             </div>
             <div class="card">
-            <img src="ooty.jpg" alt="ooty">
+            <img src="ooty.jpg" alt="Ooty">
             <h3>Ooty</h3>
             <p>Enjoy the science tea gardens and peaceful landscapes.</p>
         </div>
             <div class="card">
-            <img src="manali.jpg" alt="Kerala">
+            <img src="manali.jpg" alt="Manali">
             <h3>Manali</h3>
             <p>Discover breathtaking valleys and thrilling adventures.</p>
         </div>
             <div class="card">
-            <img src="jaipur.jpg" alt="Kerala">
+            <img src="jaipur.jpg" alt="Jaipur">
             <h3>Jaipur</h3>
-            <p>Discover the Pink City and its timeless beauty.</p>.</p>
+            <p>Discover the Pink City and its timeless beauty.</p>
         </div>
      </div>
 </section>
-<section class="packages">
+<section id="package" class="packages">
     <h2>Tour Packages</h2>
 
     <div class="package-container">
@@ -140,7 +147,9 @@
             <p>4 Days / 3 Nights</p>
             <p>⭐⭐⭐⭐☆</p>
               <button type="button" onclick="bookNow()">Book Now</button>
-        </div>
+            </div>
+</div>
+</section>
 <section class="reviews">
     <h2>What Our Customers Say</h2>
 
@@ -171,18 +180,18 @@
 </section> 
 <section id="booking">
             <h2>Book Your Trip</h2>
-            <form id="bookingForm">
+            <form id="bookingForm" onsubmit="bookNow(); return false;">
 
-                <lable>Full Name</lable><br>
+                <label>Full Name</label><br>
                 <input type="text" id="FullName" placeholder="Enter Your Full Name">
                 <br><br>
-                <lable>Email</lable><br>
-                <input type="email" id="email" placeholder="Enter Your Email">
+                <label>Email</label><br>
+                <input type="email" id="bookingemail" placeholder="Enter Your Email">
                 <br><br>
-                <lable>Phone Number</lable><br>
-                <input type="tel" id="phone" placeholder="Enter Your Phone Number">
+                <label>Phone Number</label><br>
+                <input type="tel" id="bookingphone" placeholder="Enter Your Phone Number">
                 <br><br>
-                <lable>Destination</lable><br>
+                <label>Destination</label><br>
                 <select id="destination">
                    <option>Goa</option>
                    <option>Kashmir</option>
@@ -192,27 +201,29 @@
                    <option>Jaipur</option>
                 </select>
                    <br><br>
-                   <lable>Travel Date</lable><br>
+                   <label>Travel Date</label><br>
                     <input type="date" id="travelDate">
                     <br><br>
-                    <lable>Number of Travelers</lable><br>
+                    <label>Number of Travelers</label><br>
                     <input type="number" id="travelers" min="1" placeholder="Enter Number of Travelers">
                     <br><br>
-                    <button type="submit" onclick="bookNow()">Book Now</button>
+                    <button type="submit">
+                         Book Now
+                    </button>
             </form>
 </section> 
-<section class="contact">
+<section id="contact" class="contact">
     <h2>Contact Us</h2>
 
     <div class="contact-container">
         <form onsubmit="return validateForm()">
             <input type="text" id="name" placeholder="Enter Your Name" required>
 
-            <input type="email" id="email" placeholder="Enter Your Email" required>
+            <input type="email" id="contactemail" placeholder="Enter Your Email" required>
 
-            <input type="tel" id="phone" placeholder="Enter Your Phone Number" required>
+            <input type="tel" id="contactphone" placeholder="Enter Your Phone Number" required>
 
-            <textarea rows="5" placeholder="Your Message"></textarea>
+            <textarea id="Message" rows="5" placeholder="Your Message"></textarea>
 
             <button type="submit">Send Message</button>
         </form>
@@ -285,8 +296,8 @@
     </div>
 </section>
 
-    </div>
-</section>
+    
+
 <button onclick="topFunction()" id="topBtn">⬆ Top</button>
 <button id="darkModeBtn" onclick="toggleDarkMode()">
     🌙 Dark Mode
