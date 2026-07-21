@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Explorer</title>
+    <link rel="stylesheet" href="indexstyle.css">
+    <link rel="icon" href="favicon.png">
+</head>
+<body>
+    
+    <nav>
+        <h2> Travel App</h2>
+        <ul>
+            <li><a heref="#">Home</a> </li>
+            <li><a heref="#">About</a> </li>
+            <li><a heref="#">Destination</a> </li>
+            <li><a heref="#">Package</a> </li>
+            <li><a heref="#">Contact</a> </li>
+        </ul>
+    </nav>
+    <section class="hero">
+       
+        <div class="hero-content">
+            <div class="slider">
+    <img id="sliderImage" src="travel.jpg" alt="Travel Image">
+</div>
+            <h1>Explore the World</h1>
+            <p>Discover beautiful places and create unforgettable memories.</p>
+            <a href="#" class="btn">Explore Now</a>
+            
+        </div>
+    </section>
+    <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search Destination..." onkeyup="searchDestination()">
+</div>
+    <section class="destinations">
+    <h2>Popular Destinations</h2>
+    
+    <div class="cards">
+
+        <div class="card">
+            <img src="goa.jpg" alt="Goa">
+            <h3>Goa</h3>
+            <p>Enjoy beautiful beaches and nightlife.</p>
+        </div>
+
+        <div class="card">
+            <img src="kashmir.jpg" alt="Kashmir">
+            <h3>Kashmir</h3>
+            <p>Experience snow mountains and valleys.</p>
+        </div>
+
+            <div class="card">
+                <img src="kerala.jpg" alt="Kerala">
+                <h3>Kerala</h3>
+                <p>Explore backwaters and green nature.</p>
+            </div>
+            <div class="card">
+            <img src="ooty.jpg" alt="ooty">
+            <h3>Ooty</h3>
+            <p>Enjoy the science tea gardens and peaceful landscapes.</p>
+        </div>
+            <div class="card">
+            <img src="manali.jpg" alt="Kerala">
+            <h3>Manali</h3>
+            <p>Discover breathtaking valleys and thrilling adventures.</p>
+        </div>
+            <div class="card">
+            <img src="jaipur.jpg" alt="Kerala">
+            <h3>Jaipur</h3>
+            <p>Discover the Pink City and its timeless beauty.</p>.</p>
+        </div>
+     </div>
+</section>
+<section class="packages">
+    <h2>Tour Packages</h2>
+
+    <div class="package-container">
+
+        <div class="package-card">
+            <img src="goa.jpg" alt="Goa">
+            <h3>Goa Beach Tour</h3>
+            <h3>Goa</h3>
+            <button onclick="likePlace(this)">🤍 Favorite</button>
+            <p>Enjoy beautiful beaches and nightlife.</p>
+            <p>₹15,999</p>
+            <p>3 Days / 2 Nights</p>
+            <p>⭐⭐⭐⭐☆</p>
+              <button type="button" onclick="bookNow()">Book Now</button>
+        </div>
+
+        <div class="package-card">
+            <img src="kashmir.jpg" alt="Kashmir">
+            <h3>Kashmir Tour</h3>
+             <button onclick="likePlace(this)">🤍 Favorite</button>
+            <p>Enjoy beautiful beaches and nightlife.</p>
+            <p>₹24,999</p>
+            <p>5 Days / 4 Nights</p>
+            <p>⭐⭐⭐⭐⭐</p>
+               <button type="button" onclick="bookNow()">Book Now</button>
+        </div>
+
+        <div class="package-card">
+            <img src="kerala.jpg" alt="Kerala">
+            <h3>Kerala Tour</h3>
+             <button onclick="likePlace(this)">🤍 Favorite</button>
+            <p>Enjoy beautiful beaches and nightlife.</p>
+            <p>₹18,999</p>
+            <p>4 Days / 3 Nights</p>
+            <p>⭐⭐⭐⭐☆</p>
+              <button type="button" onclick="bookNow()">Book Now</button>
+        </div>
+        <div class="package-card">
+            <img src="ooty.jpg" alt="Kerala">
+            <h3>Ooty Tour</h3>
+             <button onclick="likePlace(this)">🤍 Favorite</button>
+            <p>Enjoy beautiful beaches and nightlife.</p>
+            <p>₹18,999</p>
+            <p>4 Days / 3 Nights</p>
+            <p>⭐⭐⭐⭐☆</p>
+               <button type="button" onclick="bookNow()">Book Now</button>
+        </div>
+        <div class="package-card">
+            <img src="manali.jpg" alt="Kerala">
+            <h3>Manali Tour</h3>
+             <button onclick="likePlace(this)">🤍 Favorite</button>
+            <p>Enjoy beautiful beaches and nightlife.</p>
+            <p>₹18,999</p>
+            <p>4 Days / 3 Nights</p>
+            <p>⭐⭐⭐⭐☆</p>
+               <button type="button" onclick="bookNow()">Book Now</button>
+        </div>
+        <div class="package-card">
+            <img src="jaipur.jpg" alt="Kerala">
+            <h3>Jaipur Tour</h3>
+             <button onclick="likePlace(this)">🤍 Favorite</button>
+            <p>Enjoy beautiful beaches and nightlife.</p>
+            <p>₹18,999</p>
+            <p>4 Days / 3 Nights</p>
+            <p>⭐⭐⭐⭐☆</p>
+              <button type="button" onclick="bookNow()">Book Now</button>
+        </div>
+<section class="reviews">
+    <h2>What Our Customers Say</h2>
+
+    <div class="review-container">
+
+        <div class="review-card">
+            <img src="user1.jpg" alt="user1">
+            <h3>Durga</h3>
+            <p>"Amazing trip! Everything was well organized. Highly recommended."</p>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+        </div>
+
+        <div class="review-card">
+            <img src="user2.jpg" alt="user2">
+            <h3>Johan</h3>
+            <p>"The hotel and transport were excellent. Great experience!"</p>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+        </div>
+
+        <div class="review-card">
+            <img src="user3.jpg" alt="user3">
+            <h3>Dhoni</h3>
+            <p>"Best travel agency. Friendly staff and affordable packages."</p>
+            <div class="stars">⭐⭐⭐⭐☆</div>
+        </div>
+
+    </div>
+</section> 
+<section id="booking">
+            <h2>Book Your Trip</h2>
+            <form id="bookingForm">
+
+                <lable>Full Name</lable><br>
+                <input type="text" id="FullName" placeholder="Enter Your Full Name">
+                <br><br>
+                <lable>Email</lable><br>
+                <input type="email" id="email" placeholder="Enter Your Email">
+                <br><br>
+                <lable>Phone Number</lable><br>
+                <input type="tel" id="phone" placeholder="Enter Your Phone Number">
+                <br><br>
+                <lable>Destination</lable><br>
+                <select id="destination">
+                   <option>Goa</option>
+                   <option>Kashmir</option>
+                   <option>Kerala</option>
+                   <option>Ooty</option>
+                   <option>Manali</option>
+                   <option>Jaipur</option>
+                </select>
+                   <br><br>
+                   <lable>Travel Date</lable><br>
+                    <input type="date" id="travelDate">
+                    <br><br>
+                    <lable>Number of Travelers</lable><br>
+                    <input type="number" id="travelers" min="1" placeholder="Enter Number of Travelers">
+                    <br><br>
+                    <button type="submit" onclick="bookNow()">Book Now</button>
+            </form>
+</section> 
+<section class="contact">
+    <h2>Contact Us</h2>
+
+    <div class="contact-container">
+        <form onsubmit="return validateForm()">
+            <input type="text" id="name" placeholder="Enter Your Name" required>
+
+            <input type="email" id="email" placeholder="Enter Your Email" required>
+
+            <input type="tel" id="phone" placeholder="Enter Your Phone Number" required>
+
+            <textarea rows="5" placeholder="Your Message"></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>      
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-box">
+            <h3>Travel World</h3>
+            <p>Explore the world with us. Enjoy the best tour packages at affordable prices.</p>
+        </div>
+
+        <div class="footer-box">
+            <h3>Quick Links</h3>
+            <a href="#">Home</a>
+            <a href="#">Destinations</a>
+            <a href="#">Packages</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <div class="footer-box">
+            <h3>Contact Info</h3>
+            <p>📍 Guntur,Andhra Pradesh,India</p>
+            <p>📞 +91 6300264764</p>
+            <p>📧 maheshmoses88@gmail.com</p>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+        © 2026 Travel World. All Rights Reserved.
+    </p>
+</footer>
+<section class="gallery">
+    <h2>Travel Gallery</h2>
+
+    <div class="gallery-container">
+        <img src="goa.jpg" alt="Goa">
+        <img src="manali.jpg" alt="Manali">
+        <img src="jaipur.jpg" alt="Jaipur">
+        <img src="kashmir.jpg" alt="Kashmir">
+        <img src="kerala.jpg" alt="Kerala">
+        <img src="ooty.jpg" alt="Ooty">
+    </div>
+</section>
+<section class="faq">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+        <h3>1. How can I book a tour package?</h3>
+        <p>You can book a package by clicking the "Book Now" button and filling in your details.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>2. Do you provide hotel booking?</h3>
+        <p>Yes, we provide hotel booking with all our tour packages.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>3. Can I cancel my booking?</h3>
+        <p>Yes, cancellation is available according to our cancellation policy.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>4. Do you offer international tours?</h3>
+        <p>Yes, we provide both domestic and international tour packages.</p>
+    </div>
+</section>
+
+    </div>
+</section>
+<button onclick="topFunction()" id="topBtn">⬆ Top</button>
+<button id="darkModeBtn" onclick="toggleDarkMode()">
+    🌙 Dark Mode
+</button>
+ <script src="script.js"></script>   
+</body>
+</html>
