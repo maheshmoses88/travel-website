@@ -26,6 +26,10 @@ nav h2{
 nav ul{
     list-style:none;
     display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
 }
 
 nav ul li{
@@ -465,32 +469,8 @@ nav ul li a:hover{
 footer{
     margin-top: 40px;
 }
-@media (max-width: 768px) {
 
-    .navbar {
-        flex-direction: column;
-    }
 
-    .nav-links {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .package-container {
-        grid-template-columns: 1fr;
-    }
-
-    .destination-container {
-        grid-template-columns: 1fr;
-    }
-
-    .booking-container,
-    .contact-container {
-        width: 90%;
-        margin: auto;
-    }
-
-}
 .about{
     padding: 60px 20px;
     text-align: center;
@@ -508,4 +488,204 @@ footer{
     font-size: 18px;
     line-height: 1.8;
     color: #555;
+}
+.about p{
+    max-width: 800px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+}
+/* =========================
+   Responsive Design
+========================= */
+
+/* Large Laptop */
+@media (max-width:1200px){
+
+nav{
+    padding:15px 30px;
+}
+
+.hero-content h1{
+    font-size:50px;
+}
+
+.cards,
+.package-container,
+.review-container{
+    gap:20px;
+}
+
+}
+
+/* Tablet */
+@media (max-width:992px){
+
+nav{
+    padding:15px 20px;
+    flex-wrap:wrap;
+}
+
+nav h2{
+    font-size:26px;
+}
+
+nav ul{
+    margin-top:15px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.hero{
+    height:70vh;
+}
+
+.hero-content h1{
+    font-size:42px;
+}
+
+.hero-content p{
+    font-size:20px;
+}
+
+.cards{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.card,
+.package-card,
+.review-card{
+    width:45%;
+}
+
+.contact form{
+    width:90%;
+}
+
+}
+
+/* Mobile */
+@media (max-width:768px){
+
+nav{
+    flex-direction:column;
+    text-align:center;
+    padding:15px;
+}
+
+nav ul{
+    flex-direction:column;
+    margin-top:15px;
+}
+
+nav ul li{
+    margin:10px 0;
+}
+
+.hero{
+    height:60vh;
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:32px;
+}
+
+.hero-content p{
+    font-size:17px;
+}
+
+.btn{
+    font-size:16px;
+    padding:10px 20px;
+}
+
+.destinations,
+.packages,
+.reviews,
+.contact,
+.gallery,
+.faq,
+.about{
+    padding:40px 15px;
+}
+
+.cards,
+.package-container,
+.review-container,
+.footer-container{
+    flex-direction:column;
+    align-items:center;
+}
+
+.card,
+.package-card,
+.review-card,
+.footer-box{
+    width:100%;
+    max-width:350px;
+}
+
+.gallery-container{
+    grid-template-columns:1fr;
+}
+
+.contact form{
+    width:100%;
+}
+
+.search-box input{
+    width:100%;
+}
+
+.slider,
+.slider img{
+    height:220px;
+}
+
+}
+
+/* Small Mobile */
+@media (max-width:480px){
+
+.hero-content h1{
+    font-size:26px;
+}
+
+.hero-content p{
+    font-size:15px;
+}
+
+nav h2{
+    font-size:22px;
+}
+
+.destinations h2,
+.packages h2,
+.reviews h2,
+.gallery h2,
+.contact h2,
+.faq h2,
+.about h2{
+    font-size:30px;
+}
+
+.card,
+.package-card,
+.review-card{
+    max-width:100%;
+}
+
+.package-card img,
+.card img,
+.review-card img{
+    width:100%;
+}
+
+.btn{
+    width:100%;
+}
+
 }
