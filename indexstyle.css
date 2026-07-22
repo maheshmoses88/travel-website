@@ -216,8 +216,8 @@ nav ul li a:hover{
 
 .review-card img{
     width:90px;
-    height:180px;
-    border-radius:50%;
+    height:160px;
+    border-radius:30%;
     object-fit:cover;
     margin-bottom:15px;
 }
